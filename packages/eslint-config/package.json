@@ -1,0 +1,15 @@
+{
+  "name": "@swe-tube/eslint-config",
+  "description": "Common ESLint configuration for apps and packages.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "prettier --check . && eslint ."
+  },
+  "dependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jest": "^27.2.1"
+  }
+}

@@ -1,46 +1,28 @@
-const { describe, expect, it } = require("@jest/globals");
-const request = require("supertest");
+const { describe, expect, it } = require('@jest/globals');
+const request = require('supertest');
 
-describe("GET /:id", () => {
-  beforeEach(() => {
-    req = request("http://localhost:9999/.netlify/functions")
-      .get("/resources/42")
-      .set("Accept", "application/json");
-  });
+describe('GET /:id', () => {
+	const req = () =>
+		request('http://localhost:9999/.netlify/functions')
+			.get('/resources/42')
+			.set('Accept', 'application/json');
 
-  it("succeeds", (done) => {
-    req.end((err, { statusCode }) => {
-      if (err) {
-        throw err;
-      }
+	it('succeeds', async () => {
+		const { statusCode } = await req();
 
-      expect(statusCode).toBe(200);
-      done();
-    });
-  });
+		expect(statusCode).toBe(200);
+	});
 
-  it("responds with 'application/json'", (done) => {
-    req.end((err, { headers }) => {
-      if (err) {
-        throw err;
-      }
+	it('responds with `application/json`', async () => {
+		const { headers } = await req();
 
-      expect(headers["content-type"]).toContain("application/json");
-      done();
-    });
-  });
+		expect(headers['content-type']).toContain('application/json');
+	});
 
-  it("responds with a resource", (done) => {
-    req.end((err, { text }) => {
-      if (err) {
-        throw err;
-      }
+	it('responds with a resource', async () => {
+		const resource = await req().then(({ text }) => JSON.parse(text));
 
-      const resource = JSON.parse(text);
-
-      expect(resource).toHaveProperty("id");
-      expect(resource).toHaveProperty("type", "resource");
-      done();
-    });
-  });
+		expect(resource).toHaveProperty('id');
+		expect(resource).toHaveProperty('type', 'resource');
+	});
 });

@@ -31,26 +31,26 @@ No request parameters are required.
 
 ```json
 [
-  {
-    "id": "1",
-    "title": "Introduction to JavaScript",
-    "description": "Learn the basics of JavaScript programming.",
-    "url": "https://www.example.com/intro-to-javascript",
-    "type": "article",
-    "created_by": "John Doe",
-    "created_at": "2022-01-01T00:00:00Z",
-    "updated_at": "2022-01-01T00:00:00Z"
-  },
-  {
-    "id": "2",
-    "title": "React Tutorial",
-    "description": "Learn how to build web applications with React.",
-    "url": "https://www.example.com/react-tutorial",
-    "type": "video",
-    "created_by": "Jane Smith",
-    "created_at": "2022-01-02T00:00:00Z",
-    "updated_at": "2022-01-02T00:00:00Z"
-  }
+	{
+		"id": "1",
+		"title": "Introduction to JavaScript",
+		"description": "Learn the basics of JavaScript programming.",
+		"url": "https://www.example.com/intro-to-javascript",
+		"type": "article",
+		"created_by": "John Doe",
+		"created_at": "2022-01-01T00:00:00Z",
+		"updated_at": "2022-01-01T00:00:00Z"
+	},
+	{
+		"id": "2",
+		"title": "React Tutorial",
+		"description": "Learn how to build web applications with React.",
+		"url": "https://www.example.com/react-tutorial",
+		"type": "video",
+		"created_by": "Jane Smith",
+		"created_at": "2022-01-02T00:00:00Z",
+		"updated_at": "2022-01-02T00:00:00Z"
+	}
 ]
 ```
 
@@ -85,12 +85,13 @@ Retrieves a single learning resource by ID.
 
 ```json
 {
-  "id": "1",
-  "title": "Introduction to JavaScript",
-  "description": "Learn the basics of JavaScript programming.",
-  "url": "https://www.example.com/intro-to-javascript",
-  "type": "article",
-  "created_by": "John Doe",
-  "created_at": "2022-01-01T00:00:00Z",
-  "updated_at": "2022-01-01T00:00:00Z"
+	"id": "1",
+	"title": "Introduction to JavaScript",
+	"description": "Learn the basics of JavaScript programming.",
+	"url": "https://www.example.com/intro-to-javascript",
+	"type": "article",
+	"created_by": "John Doe",
+	"created_at": "2022-01-01T00:00:00Z",
+	"updated_at": "2022-01-01T00:00:00Z"
 }
+```

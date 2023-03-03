@@ -1,4 +1,4 @@
-const { getAllResources } = require("../../../lib/queries");
+const { getAllResources } = require('../../../lib/queries');
 
 /**
  * Endpoint handler for GET request on resources collection.
@@ -12,15 +12,15 @@ const { getAllResources } = require("../../../lib/queries");
  * @type {import("express").Handler}
  */
 const getResources = async (req, res) => {
-  try {
-    const data = await getAllResources();
+	try {
+		const data = await getAllResources();
 
-    res.json(data);
-  } catch (e) {
-    console.error(e);
+		res.json(data);
+	} catch (e) {
+		console.error(e);
 
-    res.sendStatus(500);
-  }
+		res.sendStatus(500);
+	}
 };
 
 module.exports = getResources;
