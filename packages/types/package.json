@@ -1,0 +1,17 @@
+{
+	"name": "@swe-tube/types",
+	"version": "0.1.0",
+	"description": "SWE-Tube type definitions.",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"SWE Tube",
+		"types"
+	],
+	"author": "Matthew Gibbons <matthew.gibbons@multiverse.io>",
+	"devDependencies": {
+		"typescript": "^4.9.5"
+	}
+}
